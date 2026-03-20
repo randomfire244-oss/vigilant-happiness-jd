@@ -68,10 +68,9 @@ jobs:
           if (-not $nodeIP) { exit 1 }
           echo "NODE_IP=$nodeIP" >> $env:GITHUB_ENV
 
-      - name: Install WinRAR & JDownloader
+      - name: Install WinRAR
         run: |
           choco install winrar -y
-          choco install jdownloader -y
 
       - name: Verify Environment Connectivity
         run: |
